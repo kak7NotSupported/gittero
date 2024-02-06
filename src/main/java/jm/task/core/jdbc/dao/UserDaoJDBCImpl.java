@@ -18,13 +18,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void createUsersTable() {
         try (Connection conn = Util.getConnection()) {
-            String querry = "CREATE TABLE IF NOT EXISTS User (\n" +
+            String query = "CREATE TABLE IF NOT EXISTS User (\n" +
                     "    id bigint AUTO_INCREMENT PRIMARY KEY,\n" +
                     "    name varchar(255) NULL,\n" +
                     "    lastName varchar(255) NULL,\n" +
                     "    age tinyint NULL\n" +
                     ");";
-            try (PreparedStatement statement = conn.prepareStatement(querry)) {
+            try (PreparedStatement statement = conn.prepareStatement(query)) {
                 statement.executeUpdate();
             }
         } catch (SQLException e) {
@@ -34,7 +34,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public void dropUsersTable() {
         try (Connection conn = Util.getConnection()) {
-            try (PreparedStatement statement = conn.prepareStatement("DROP TABLE User")) {
+            try (PreparedStatement statement = conn.prepareStatement("DROP TABLE IF EXISTS User")) {
                 statement.executeUpdate();
             }
         } catch (SQLException e) {
