@@ -16,6 +16,7 @@ public class Util {
     private static final String url = "jdbc:mysql://185.58.207.153:3306/post_project";
     private static final String user = "mysql";
     private static final String password = "0000";
+    private static SessionFactory sessionFactory;
 
     public static Connection getConnection() {
 
@@ -25,8 +26,6 @@ public class Util {
             throw new RuntimeException(e);
         }
     }
-
-    private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
