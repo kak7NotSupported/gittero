@@ -12,10 +12,14 @@ import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
-        UserService userDao = new UserServiceImpl();
-        userDao.createUsersTable();
-        userDao.saveUser("Adam", "Jemeson", (byte) 40);
-        userDao.cleanUsersTable();
-
+        UserService service = new UserServiceImpl();
+        service.createUsersTable();
+        service.saveUser("Adam", "Jensen", (byte) 40);
+        service.saveUser("Megan", "Reed", (byte) 32);
+        service.saveUser("Eliza", "Cassan", (byte) 53);
+        service.saveUser("David", "Sarif", (byte) 61);
+        service.getAllUsers().forEach(System.out::println);
+        service.cleanUsersTable();
+        service.dropUsersTable();
     }
 }
