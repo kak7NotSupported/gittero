@@ -1,11 +1,11 @@
-package app.model;
+package koschei.models;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class Cat extends Animal {
+public class Deth8 {
     @Override
     public String toString() {
-        return "Im a Cat";
+        return "смерть";
     }
 }
