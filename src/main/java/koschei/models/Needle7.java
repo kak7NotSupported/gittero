@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 public class Needle7 {
 
     @Autowired
-    Deth8 deth8;
+    private Deth8 deth8;
 
     @Override
     public String toString() {
