@@ -9,4 +9,7 @@ public interface UserService {
     List<User> listUsers();
 
     List<User> getUsersWithCars();
+
+    User getUserByCarData(String model, int series);
+
 }

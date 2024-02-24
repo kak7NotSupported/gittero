@@ -32,6 +32,8 @@ public class MainApp {
 
         userService.getUsersWithCars().forEach(System.out::println);
 
+        System.out.println(userService.getUserByCarData("Lada", 331).getEmail());
+
         context.close();
     }
 }

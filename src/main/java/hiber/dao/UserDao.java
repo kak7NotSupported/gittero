@@ -9,4 +9,6 @@ public interface UserDao {
    List<User> listUsers();
 
    List<User> getUsersWithCars();
+
+   User getUserByCarData(String model, int serial);
 }
