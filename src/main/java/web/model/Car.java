@@ -1,7 +1,8 @@
 package web.model;
 
-public class Car {
+import org.springframework.context.annotation.Bean;
 
+public class Car {
 
     private int id;
     private String color;
